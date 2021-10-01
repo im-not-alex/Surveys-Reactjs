@@ -1,0 +1,193 @@
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+textarea {
+    resize: none;
+}
+
+#add-question, #add-survey {
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 30px;
+    text-anchor: middle;
+}
+
+.vertical-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.run-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    -webkit-transition: opacity 0.4s ease-in-out;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.card:hover .run-card {
+    opacity: 0.85;
+}
+
+.survey-title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.question-title {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 2rem;
+}
+
+.question-title:first-letter {
+    text-transform: uppercase;
+}
+
+#title-line {
+    overflow: hidden;
+    position: absolute;
+    height: 10px;
+    background: green;
+    width: 100%;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+
+#card-focus {
+    overflow: hidden;
+    position: absolute;
+    width: 8px;
+    background: #f50057;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+#titleCard, .question-card {
+    position: relative;
+    padding: 28px 20px 28px 20px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    overflow: auto;
+}
+
+.display-option {
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+.options-sizing {
+    width: 100%;
+    flex-flow: column nowrap;
+    max-height: 210px;
+    overflow-y: auto;
+    overflow-scrolling: auto;
+}
+
+.legend {
+    font-size: 0.85rem;
+}
+
+#admin-dropdown > * {
+    text-align: end;
+}
+
+.no-text-transform {
+    text-transform: unset;
+}
+
+.opt-item-list {
+    margin-left: -24px !important;
+}
+
+.MuiListItem-secondaryAction {
+    padding-right: 36px;
+}
+
+.page-title-bar {
+    width: 100%;
+    position: fixed;
+    z-index: 5;
+    line-height: 2.5rem;
+    font-size: clamp(25px, 5vw, 30px);
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-style: italic;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    overflow-style: marquee-line;
+}
+
+.page-title-bar + * {
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+
+.title-in-table {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    overflow: auto;
+}
+
+.underline-text {
+    text-decoration: underline;
+}
+
+td, th {
+    vertical-align: middle !important;
+}
+
+@media (min-width: 600px) {
+    .MuiGrid-justify-sm-flex-end {
+        justify-content: flex-end;
+    }
+}
